@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="(item , index) in list">{{ index + 1 }}.{{ item }}</li>
+    </ul>
+  </div>
+
+
+  <script src="../js/vue-2.4.0.js"></script>
+  <script>
+    const app = new Vue({
+      el: "#app",
+      data: {
+        list:[
+          '海尔兄弟',
+          '海王',
+          '海贼王',
+          '火影忍者'
+        ]
+
+      },
+      methods: {
+
+      },
+    })
+  </script>
+</body>
+
+
+</html>

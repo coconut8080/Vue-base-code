@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <cpn :c-info="Info"></cpn>
+  </div>
+
+  <template id="cpn">
+    <div>
+      <ul>
+        <li v-for="value in cInfo">{{value}}</li>
+      </ul>
+    </div>
+  </template>
+  <script src="../js/vue-2.4.0.js"></script>
+
+  <script>
+    const cpn = {
+      template: "#cpn",
+      props:{
+        cInfo:{
+          type:Object,
+          defalut(){
+            return {}
+          }
+        }
+      }
+    }
+
+    const app = new Vue({
+      el: "#app",
+      data: {
+        Info:{
+          name:"Ammy",
+          age:18,
+          height:1.78
+        }
+      },
+      methods: {
+
+      },
+      components: {
+        cpn
+      }
+    })
+  </script>
+</body>
+
+</html>
